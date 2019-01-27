@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Holodeck-Licht</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          &nbsp;
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="card" id="sectionCard">
+            <div class="card-body">
+              <h5 class="card-title">Section (Only "all" working atm)</h5>
+              <div class="form-group">
+<!--                <label for="sectionSelection">Section</label> -->
+                <select class="form-control" id="sectionSelection">
+                  <option>all</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          &nbsp;
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card" id="colorPickerCard">
+            <div class="card-body">
+            <h5 class="card-title">Color Picker</h5>
+          <form>
+            <div class="form-group">
+              <label for="redValue">Red</label>
+              <input type="range" class="form-control-range" id="redValueSlider"
+              min="0" max="1" step="0.01">
+            </div>
+            <div class="form-group">
+              <label for="greenValue">Green</label>
+              <input type="range" class="form-control-range" id="greenValueSlider"
+              min="0" max="1" step="0.01">
+            </div>
+            <div class="form-group">
+              <label for="blueValue">Blue</label>
+              <input type="range" class="form-control-range" id="blueValueSlider"
+              min="0" max="1" step="0.01">
+            </div>
+            <div class="form-group">
+              <label for="whiteValue">White</label>
+              <input type="range" class="form-control-range" id="whiteValueSlider"
+              min="0" max="1" step="0.01">
+            </div>
+          </form>
+              <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+            </div>
+          </div>
+          &nbsp;
+        </div>
+        <div class="col-12 col-md-3">
+          <h5 class="d-md-none">Presets</h5>
+          <div class="card" id ="warmWhiteCard">
+
+            <div class="card-body">
+              <h5 class="card-title">Warm White</h5>
+              <button data-whichpreset="nicewhite" type="button" class="btn btn-primary presetClass" id="setWarmWhiteButton">Set</button>
+            </div>
+          </div>
+
+          <div class="card" id ="coldWhiteCard">
+
+            <div class="card-body">
+              <h5 class="card-title">Cold White</h5>
+              <button data-whichpreset="day" type="button" class="btn btn-primary presetClass" id="setColdWhiteButton">Set</button>
+            </div>
+          </div>
+
+          <div class="card" id ="nearlyOffCard">
+
+            <div class="card-body">
+              <h5 class="card-title">Nearly Off</h5>
+              <button data-whichpreset="off" type="button" class="btn btn-primary presetClass" id="setNearlyOffButton">Set</button>
+            </div>
+          </div>
+
+          <div class="card" id ="reallyOffCard">
+
+            <div class="card-body">
+              <h5 class="card-title">Really Off</h5>
+              <button data-whichpreset="night" type="button" class="btn btn-primary presetClass" id="setReallyOffButton">Set</button>
+            </div>
+          </div>
+
+          <div class="card" id ="hotCard">
+
+            <div class="card-body">
+              <h5 class="card-title">Hot!</h5>
+              <button data-whichpreset="0.2,0,0,0" type="button" class="btn btn-primary presetClass" id="setHotButton">Set</button>
+            </div>
+          </div>
+          &nbsp;
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="submit.js"></script>
+  </body>
+</html>
